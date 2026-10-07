@@ -1,0 +1,52 @@
+#include <winres.h>
+#include "resource.h"
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+IDI_APP ICON "ae5fix.ico"
+
+1 RT_MANIFEST "ae5fix.manifest"
+
+IDD_MAIN DIALOGEX 0, 0, 200, 120
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_CLIPCHILDREN
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "AE-5 Fix"
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    LTEXT           "Listening on", IDC_LBL_OUT, 0, 0, 40, 8, SS_NOPREFIX
+    CONTROL         "&Headphones", IDC_HP, "Button", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 0, 12, 50, 10
+    CONTROL         "&Speakers", IDC_SP, "Button", BS_AUTORADIOBUTTON | WS_TABSTOP, 60, 12, 50, 10
+    LTEXT           "Shortcut", IDC_LBL_KEY, 0, 28, 30, 10, SS_CENTERIMAGE | SS_NOPREFIX
+    LTEXT           "", IDC_KEY, 32, 28, 40, 10, SS_CENTERIMAGE | SS_ENDELLIPSIS | SS_NOPREFIX
+    PUSHBUTTON      "&Change", IDC_SET, 80, 28, 36, 12, WS_GROUP | WS_TABSTOP
+    CONTROL         "Start with &Windows", IDC_AUTO, "Button", BS_AUTOCHECKBOX | WS_TABSTOP | WS_GROUP, 0, 46, 80, 10
+    PUSHBUTTON      "&Fix now", IDC_TEST, 0, 62, 40, 12, WS_TABSTOP
+    LTEXT           "Ready", IDC_STATUS, 44, 62, 70, 12, SS_CENTERIMAGE | SS_ENDELLIPSIS | SS_NOPREFIX
+END
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "Restores Sound Blaster AE-5 spatial audio"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "AE5Fix"
+            VALUE "OriginalFilename", "AE5Fix.exe"
+            VALUE "ProductName", "AE-5 Fix"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
