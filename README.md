@@ -1,50 +1,28 @@
 # AE5 Fix
 
-Spatial sound on a Sound Blaster AE-5 Plus can die mid-session, or the game just starts sounding flat and wrong. This puts it back.
-
-You do not need to build anything, and you do not need to know how the card works.
+A key that puts a stuck Sound Blaster AE-5 or AE-5 Plus back. When the sound goes thin, press it. The window does not have to be open, and you do not have to stop what you are doing.
 
 ## Get it
 
-1. Open the [latest release](https://github.com/Bombardofficial/AE5Fix/releases/latest).
-2. Download **AE5Fix-1.0.0.zip**.
-3. Unzip it somewhere you will remember.
-4. Leave the files in that folder. Both files have to stay together.
+1. Download [AE5Fix-1.0.0.zip](https://github.com/Bombardofficial/AE5Fix/releases/latest).
+2. Unzip it. Leave `AE5Fix.exe` and `sbz-switch.exe` in that folder.
+3. Run `AE5Fix.exe`.
+4. Set **Listening on** to Headphones or Speakers, whichever you use.
 
-## Start it
+**Start with Windows** keeps the key after a restart. Closing the window leaves it by the clock. Right-click the icon and choose **Exit** to quit.
 
-Double-click **AE5Fix.exe**.
+Sound Blaster Command has to be installed, and Windows has to be playing through the AE-5.
 
-- Choose **Headphones** or **Speakers**, whichever you are actually listening on.
-- Click **Fix now**.
+## The key
 
-That is the whole fix.
+Press the shortcut when the sound is wrong. It switches away from your output and straight back. That is the same reset as the headphones and speakers control in Sound Blaster Command.
 
-## In a game
+It starts on F10. **Change** sets another key. **Fix now** is the same reset from the window. **Listening on** is the output it returns to.
 
-You do not have to leave the game. Press **F10** and it fixes the sound while you play. If the game already uses F10, click **Change** in the window and press another key.
+It will not press itself, and it will not stop this happening again. If the card is missing in Windows, this cannot bring it back.
 
-Tick **Start with Windows** if you want that key to still work after a restart.
+The switch is [sbz-switch](https://github.com/mdonoughe/sbz-switch), included in the zip with its license. AE5 Fix is MIT. See `LICENSE`.
 
-Closing the window does not turn it off. It stays by the clock. To quit, right-click the icon there and choose **Exit**.
+## Build it yourself
 
-## If nothing changes
-
-Two things have to already be true:
-
-- Creative's Sound Blaster app is installed.
-- Windows is playing sound through the AE-5.
-
-## What it actually does
-
-The card's spatial sound can get stuck. The program switches the output to the other device for a moment, then straight back to the one you picked. The shortcut does that same switch, including while a game is running.
-
-The switch itself is done by a small program called [sbz-switch](https://github.com/mdonoughe/sbz-switch), which is already in the zip, with its license.
-
-AE5 Fix is free to use and share. The terms are in `LICENSE`.
-
-## Only if you want to build it
-
-Everyone else can stop here.
-
-Open `AE5Fix.slnx` in Visual Studio and build Release x64. The zip's `sbz-switch.exe` still has to sit next to the exe you built.
+Open `AE5Fix.slnx` in Visual Studio, build Release x64, and put `sbz-switch.exe` next to the exe you built.
